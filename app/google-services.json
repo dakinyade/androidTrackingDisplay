@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "831927648393",
+    "firebase_url": "https://transportapplication-8f377.firebaseio.com",
+    "project_id": "transportapplication-8f377",
+    "storage_bucket": "transportapplication-8f377.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831927648393:android:2784da611d6d542a",
+        "android_client_info": {
+          "package_name": "io.mikesportfolio.com.trackingdisplay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831927648393-1pgvuuekoudnh3n12jo57odrb0f0tuat.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.mikesportfolio.com.trackingdisplay",
+            "certificate_hash": "2e995afd5cb1695f2783cd095691d2ccac12e1b0"
+          }
+        },
+        {
+          "client_id": "831927648393-qisperli6tskllhamvrndhikp7qb5h3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpnsQYhageL_OWMgw6shzPncJifyzuHoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831927648393-qisperli6tskllhamvrndhikp7qb5h3s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831927648393:android:20667c5691eca1f4",
+        "android_client_info": {
+          "package_name": "io.mikesportfolio.com.transportapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831927648393-mmcjn45994lmb2vd7ru5u7535dp7n4lv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.mikesportfolio.com.transportapplication",
+            "certificate_hash": "2e995afd5cb1695f2783cd095691d2ccac12e1b0"
+          }
+        },
+        {
+          "client_id": "831927648393-qisperli6tskllhamvrndhikp7qb5h3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpnsQYhageL_OWMgw6shzPncJifyzuHoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831927648393-qisperli6tskllhamvrndhikp7qb5h3s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
