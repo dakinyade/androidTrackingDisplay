@@ -8,6 +8,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
@@ -41,7 +42,7 @@ public class DisplayActivity extends FragmentActivity implements OnMapReadyCallb
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+        public void onMapReady(GoogleMap googleMap) {
         // Authenticate with Firebase when the Google map is loaded
         mMap = googleMap;
         mMap.setMaxZoomPreference(16);
@@ -68,7 +69,9 @@ public class DisplayActivity extends FragmentActivity implements OnMapReadyCallb
 
     private void subscribeToUpdates() {
         String locationPath = getString(R.string.firebase_path);
+
         Query ref = FirebaseDatabase.getInstance().getReference(locationPath).orderByChild("12345-dna").limitToLast(1);
+
         ref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String previousChildName) {
@@ -95,6 +98,31 @@ public class DisplayActivity extends FragmentActivity implements OnMapReadyCallb
         });
     }
 
+    //decide which icon to render in the map
+    public int iconPicker(int value){
+        int retVal = 0;
+
+    int man = 1;
+    int woman= 2;
+    int car = 3;
+
+        switch (value){
+
+            case 1: retVal = R.drawable.men;
+            break;
+
+            case 2: retVal= R.drawable.women;
+            break;
+
+            case 3: retVal= R.drawable.car;
+            break;
+
+        }
+
+
+        return retVal;
+    }
+
     private void setMarker(DataSnapshot dataSnapshot) {
         // When a location update is received, put or update
         // its value in mMarkers, which contains all the markers
@@ -111,7 +139,7 @@ public class DisplayActivity extends FragmentActivity implements OnMapReadyCallb
            double lng = Double.parseDouble(value.get("longitude").toString());
             LatLng location = new LatLng(lat, lng);
             if (!mMarkers.containsKey(key)) {
-                mMarkers.put(key, mMap.addMarker(new MarkerOptions().title(key).position(location)));
+                mMarkers.put(key, mMap.addMarker(new MarkerOptions().title(key).position(location).draggable(true).icon(BitmapDescriptorFactory.fromResource(iconPicker(1)))));
             } else {
                 mMarkers.get(key).setPosition(location);
             }
